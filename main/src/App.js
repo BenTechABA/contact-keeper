@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import {
   BrowserRouter,
-  Switch,
+  Routes,
   Route
 } from "react-router-dom";
 
@@ -30,12 +30,13 @@ const App = () => {
 <Fragment>
   <Navbar />
   <Alerts />
-      <Switch>
-      <PrivateRoute exact path='/' component={Home}/>
-        <Route exact path="/about" component={About}/>
-        <Route exact path="/register" component={Register} />
-        <Route exact path="/login" component={Login} />
-      </Switch>
+      <Routes>
+      <Route path='/' element={<Home />}/>
+        <Route path="/about" element={<About />}/>
+        <Route path="/register" element={<Register />}/>
+        <Route path="/login" element={<Login />}/>
+        
+      </Routes>
     </Fragment>
     </BrowserRouter>
     </AlertState>
