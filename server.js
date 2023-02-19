@@ -1,11 +1,11 @@
 const express = require('express');
 const path = require('path')
 //const { default: mongoose } = require('mongoose');
-//const connectDB = require('./config/db');
+const connectDB = require('./config/db');
 
 const app = express();
 
-//connectDB();
+connectDB();
 
 // app.post("/", (req, res) => {
 //     res.send('This is it')
@@ -26,5 +26,5 @@ if(process.env.NODE_ENV === 'production'){
     app.get('*', (req, res)=> res.sendFile(path.resolve(__dirname, 'main', 'build', 'index.html')))
 }
 // app.get('/', (req, res) => res.json({msg: 'Welcome to contact keeper'}));
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5300;
 app.listen(PORT, () => console.log(`server has started on ${PORT}`));

@@ -1,2 +1,2 @@
-[main\build]
-    publish="build"
+[main]
+    publish="main\build"

@@ -1,8 +1,10 @@
 import React, { Fragment } from 'react';
 import {
   BrowserRouter,
-  Routes,
-  Route
+  
+  Route,
+  
+  Switch
 } from "react-router-dom";
 
 import AuthState from './context/auth/AuthState';
@@ -30,13 +32,13 @@ const App = () => {
 <Fragment>
   <Navbar />
   <Alerts />
-      <Routes>
-      <Route path='/' element={<Home />}/>
-        <Route path="/about" element={<About />}/>
-        <Route path="/register" element={<Register />}/>
-        <Route path="/login" element={<Login />}/>
+      <Switch>
+      <PrivateRoute exact path='/' component={Home}/>
+        <Route exact path="/about" component={About}/>
+        <Route exact path="/register" component={Register}/>
+        <Route exact path="/login" component={Login}/>
         
-      </Routes>
+      </Switch>
     </Fragment>
     </BrowserRouter>
     </AlertState>
