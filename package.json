@@ -2,7 +2,7 @@
   "name": "contact-keeper",
   "version": "3.2.5",
   "description": "Contact manager app",
-  "main": "server.js",
+  "main": "index.js",
   "scripts": {
     "client-install": "npm install --prefix main",
     "start": "nodemon server.js",
