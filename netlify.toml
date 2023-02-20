@@ -1,2 +1,2 @@
-[main]
-    publish="main\build"
+[build]
+    functions = "functions"

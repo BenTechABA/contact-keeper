@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path')
 //const { default: mongoose } = require('mongoose');
-const connectDB = require('./config/db');
+const connectDB = require('../config/db');
 
 const app = express();
 
@@ -14,9 +14,9 @@ connectDB();
 app.use(express.json({extended: false}));
 // Define Routes
 
-app.use('/api/users', require('./routes/users'));
-app.use('/api/auth', require('./routes/auth'));
-app.use('/api/contacts', require('./routes/contacts'));
+app.use('/api/users', require('../routes/users'));
+app.use('/api/auth', require('../routes/auth'));
+app.use('/api/contacts', require('../routes/contacts'));
 
 //server static assets in production
 if(process.env.NODE_ENV === 'production'){

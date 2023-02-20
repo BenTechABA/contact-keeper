@@ -6,6 +6,7 @@
   "scripts": {
     "client-install": "npm install --prefix main",
     "start": "nodemon index.js",
+    "build":"npx netlify deploy --prod",
     "server": "nodemon index.js",
     "client": "npm start --prefix main",
     "lid": "node concurrently.js",
